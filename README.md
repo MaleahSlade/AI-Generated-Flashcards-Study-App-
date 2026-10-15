@@ -1,1 +1,1 @@
-Per Scholas AI Coding Challenge
+Lab 8.1 AI Coding Challenge
