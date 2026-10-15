@@ -1,0 +1,1 @@
+A responsive flashcard study app built primarily through AI prompting and AI-assisted development using HTML, CSS, and JavaScript. Features multiple decks, flashcard creation, editing, deletion, search, shuffle, and LocalStorage persistence. An exercise in prompt engineering, iterative development, debugging, and user-centered design.
