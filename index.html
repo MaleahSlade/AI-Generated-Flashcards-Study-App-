@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards Study App</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+
+<body>
+    <header class="app-header">
+        <h1>Flashcards</h1>
+
+        <button id="new-deck-button" type="button">
+            + New Deck
+        </button>
+    </header>
+
+    <div class="app-layout">
+
+        <aside class="sidebar">
+    <h2>My Decks</h2>
+
+    <nav aria-label="Flashcard decks">
+        <ul id="deck-list">
+            <!-- JavaScript will add numbered decks here -->
+        </ul>
+    </nav>
+
+    <button id="add-deck-button" type="button">+ Add Deck</button>
+
+    <form id="deck-form" hidden>
+        <label for="deck-name">Deck name</label>
+        <input
+            type="text"
+            id="deck-name"
+            placeholder="Enter a deck name"
+            required
+            maxlength="60"
+        >
+        <button type="submit">Create Deck</button>
+        <button id="cancel-deck-button" type="button">Cancel</button>
+    </form>
+</aside>
+
+        <main class="main-content">
+            <section aria-labelledby="deck-title">
+                <div class="deck-header">
+                    <h2 id="deck-title">Welcome to Flashcards</h2>
+
+                    <p id="deck-description">
+                        Create a deck to get started.
+                    </p>
+                </div>
+
+                <div class="toolbar">
+                    <label for="card-search">Search cards</label>
+
+                    <input type="search" id="card-search" placeholder="Search your cards...">
+
+                    <button id="shuffle-button" type="button">
+                        Shuffle
+                    </button>
+
+                    <button id="new-card-button" type="button">
+                        + New Card
+                    </button>
+                </div>
+                <!-- Form for creating a flashcard -->
+<form id="card-form" hidden>
+    <h3 id="card-form-title">Create a Flashcard</h3>
+
+    <div class="form-field">
+        <label for="card-front">Question or Front</label>
+        <textarea
+            id="card-front"
+            placeholder="Enter your question"
+            required
+            rows="3"
+        ></textarea>
+    </div>
+
+    <div class="form-field">
+        <label for="card-back">Answer or Back</label>
+        <textarea
+            id="card-back"
+            placeholder="Enter your answer"
+            required
+            rows="3"
+        ></textarea>
+    </div>
+
+    <button type="submit" id="save-card-button">Save Flashcard</button>
+    <button id="cancel-card-button" type="button">Cancel</button>
+</form>
+                <div id="study-area">
+                    <p id="empty-state">
+                        Create a deck and add some flashcards to begin.
+                    </p>
+                </div>
+
+                <div class="study-controls">
+                    <button id="previous-button" type="button" disabled>
+                        Previous
+                    </button>
+
+                    <button id="flip-button" type="button" disabled>
+                        Flip Card
+                    </button>
+
+                    <button id="next-button" type="button" disabled>
+                        Next
+                    </button>
+                </div>
+
+                <p id="card-counter" aria-live="polite">
+                    No cards yet
+                </p>
+            </section>
+        </main>
+
+    </div>
+
+    <footer class="app-footer">
+        <p>
+            Tip: Press Space to flip a card and use the arrow keys
+            to navigate between cards when the study area is active.
+        </p>
+    </footer>
+</body>
+
+</html>
